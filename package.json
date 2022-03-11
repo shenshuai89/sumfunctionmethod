@@ -1,0 +1,11 @@
+{
+  "name": "sumfunctionmethod",
+  "version": "1.0.0",
+  "description": "发布npm包，整套流程开发demo",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "author": "shenshuai89",
+  "license": "ISC"
+}
