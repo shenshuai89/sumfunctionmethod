@@ -17,7 +17,9 @@
   "author": "shenshuai89",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.17.5",
     "@babel/eslint-parser": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
     "@rollup/plugin-alias": "^3.1.9",
     "@rollup/plugin-babel": "^5.3.1",
     "@rollup/plugin-commonjs": "^21.0.2",
