@@ -12,11 +12,11 @@ import { name, version, author } from '../package.json'
 const pkgName = 'sumfunctionmethods'
 // 打包处理的文件，添加的备注信息
 const banner =
-'/*!\n' +
-` * ${name} v${version}\n` +
-` * (c) 2022-${new Date().getFullYear()} ${author}\n` +
-' * Released under the MIT License.\n' +
-' */'
+  '/*!\n' +
+  ` * ${name} v${version}\n` +
+  ` * (c) 2022-${new Date().getFullYear()} ${author}\n` +
+  ' * Released under the MIT License.\n' +
+  ' */'
 
 export default {
   input: 'src/index.js',
@@ -26,57 +26,59 @@ export default {
       file: `dist/${pkgName}.umd.js`,
       format: 'umd',
       name: pkgName,
-      banner
+      banner,
     },
     {
       file: `dist/${pkgName}.umd.min.js`,
       format: 'umd',
       name: pkgName,
       banner,
-      plugins: [terser()]
+      plugins: [terser()],
     },
     {
       file: `dist/${pkgName}.cjs.js`,
       format: 'cjs',
       name: pkgName,
       banner,
-      plugins: [terser()]
+      plugins: [terser()],
     },
     {
       file: `dist/${pkgName}.esm.js`,
       format: 'es',
       name: pkgName,
       banner,
-      plugins: [terser()]
+      plugins: [terser()],
     },
     {
       file: `dist/${pkgName}.js`,
       format: 'iife',
       name: pkgName,
       banner,
-      plugins: [terser()]
-    }
+      plugins: [terser()],
+    },
   ],
   // 注意 plugin 的使用顺序
   plugins: [
     json(),
     clear({
-      targets: ['dist']
+      targets: ['dist'],
     }),
     alias(),
     replace({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
-      preventAssignment: true
+      'process.env.NODE_ENV': JSON.stringify(
+        process.env.NODE_ENV || 'development',
+      ),
+      preventAssignment: true,
     }),
     nodeResolve(),
     commonjs({
-      include: 'node_modules/**'
+      include: 'node_modules/**',
     }),
     eslint({
       throwOnError: true, // 抛出异常并阻止打包
       include: ['src/**'],
-      exclude: ['node_modules/**']
+      exclude: ['node_modules/**'],
     }),
-    babel({ babelHelpers: 'bundled' })
-  ]
+    babel({ babelHelpers: 'bundled' }),
+  ],
 }

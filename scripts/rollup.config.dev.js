@@ -13,6 +13,6 @@ export default {
     }),
     livereload({
       watch: 'examples/brower',
-    })
-  ]
+    }),
+  ],
 }

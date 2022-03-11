@@ -4,9 +4,15 @@
   "description": "发布npm包，整套流程开发demo",
   "main": "src/index.js",
   "scripts": {
-    "test": "npm run dev",
+    "dev": "rollup -w --environment NODE_ENV:development -c scripts/rollup.config.dev.js",
+    "build": "rollup --environment NODE_ENV:development -c scripts/rollup.config.prod.js",
+    "test": "jest",
+    "test:c": "jest --coverage",
     "lint": "eslint src",
     "fix": "eslint src --fix"
+  },
+  "jest": {
+    "preset": "rollup-jest"
   },
   "author": "shenshuai89",
   "license": "ISC",
@@ -25,7 +31,9 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^5.2.0",
+    "jest": "^27.5.1",
     "prettier": "^2.5.1",
+    "rollup-jest": "^1.1.3",
     "rollup-plugin-clear": "^2.0.7",
     "rollup-plugin-filesize": "^9.1.2",
     "rollup-plugin-livereload": "^2.0.5",
