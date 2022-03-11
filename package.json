@@ -18,7 +18,7 @@
     "preset": "rollup-jest"
   },
   "lint-staged": {
-    "src/*.{js}": [
+    "src/*.js": [
       "prettier --write",
       "eslint --cache --fix",
       "git add"
