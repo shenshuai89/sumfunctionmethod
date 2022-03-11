@@ -9,10 +9,20 @@
     "test": "jest",
     "test:c": "jest --coverage",
     "lint": "eslint src",
-    "fix": "eslint src --fix"
+    "fix": "eslint src --fix",
+    "lint-staged": "lint-staged",
+    "commitlint": "commitlint --config commitlint.config.js -e -V",
+    "prepare": "husky install"
   },
   "jest": {
     "preset": "rollup-jest"
+  },
+  "lint-staged": {
+    "src/*.{js}": [
+      "prettier --write",
+      "eslint --cache --fix",
+      "git add"
+    ]
   },
   "author": "shenshuai89",
   "license": "ISC",
@@ -33,8 +43,11 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^5.2.0",
+    "husky": "^7.0.4",
     "jest": "^27.5.1",
+    "lint-staged": "^12.3.5",
     "prettier": "^2.5.1",
+    "rollup": "^2.70.0",
     "rollup-jest": "^1.1.3",
     "rollup-plugin-clear": "^2.0.7",
     "rollup-plugin-filesize": "^9.1.2",
