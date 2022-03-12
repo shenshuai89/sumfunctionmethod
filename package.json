@@ -24,6 +24,14 @@
       "eslint --cache --fix"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shenshuai89/sumfunctionmethod.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shenshuai89/sumfunctionmethod/issues"
+  },
+  "homepage": "https://github.com/shenshuai89/sumfunctionmethod#readme",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-customizable"
