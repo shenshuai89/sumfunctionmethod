@@ -16,7 +16,14 @@
     "lint-staged": "lint-staged",
     "commit": "git-cz",
     "commitlint": "commitlint --config commitlint.config.js -e -V",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "major": "npm version major -m 'build: update major'",
+    "minor": "npm version minor -m 'build: update minor'",
+    "patch": "npm version patch -m 'build: update patch'",
+    "pub": "npm run build && npm publish --access=public", 
+    "pub:major": "npm run major && npm publish --access=public",
+    "pub:minor": "npm run minor && npm publish --access=public",
+    "pub:patch": "npm run patch && npm publish --access=public"
   },
   "jest": {
     "preset": "rollup-jest"
