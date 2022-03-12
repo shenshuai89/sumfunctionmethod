@@ -47,6 +47,10 @@
       "path": "./node_modules/cz-customizable"
     }
   },
+  "files": [
+    "dist",
+    "examples"
+  ],
   "author": "shenshuai89",
   "license": "ISC",
   "devDependencies": {
