@@ -2,7 +2,10 @@
   "name": "sumfunctionmethod",
   "version": "1.0.0",
   "description": "发布npm包，整套流程开发demo",
-  "main": "src/index.js",
+  "main": "src/dist/sumfunctionmethod.umd.min.js",
+  "module": "dist/sumfunctionmethod.esm.js",
+  "unpkg": "dist/sumfunctionmethod.js",
+  "jsdelivr": "dist/sumfunctionmethodjs",
   "scripts": {
     "dev": "rollup -w --environment NODE_ENV:development -c scripts/rollup.config.dev.js",
     "build": "rollup --environment NODE_ENV:development -c scripts/rollup.config.prod.js",
